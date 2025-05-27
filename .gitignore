@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+
+# Frontend build
+frontend/dist/
+dist/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+
+# Environment & credentials
+.env
+
+# Vector DB
+backend/chroma_db/
+
+# System files
+.DS_Store
+
+# Glossary
+backend/glossary.json
