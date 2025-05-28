@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: infrassistant-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn backend.main:app --host 0.0.0.0 --port 10000"
+    plan: free
+    envVars:
+      - key: CLIENT_ID
+        value: your-client-id
+      - key: CLIENT_SECRET
+        value: your-client-secret
+      - key: MONGO_URI
+        value: your-mongo-uri
