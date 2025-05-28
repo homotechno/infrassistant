@@ -1,10 +1,6 @@
 # Node dependencies
 node_modules/
 
-# Frontend build
-frontend/dist/
-dist/
-
 # Python cache and compiled files
 __pycache__/
 *.pyc
