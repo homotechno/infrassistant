@@ -1,8 +1,7 @@
-# Infra-Assistant: AI-Powered PostgreSQL Incident Reporter 💡
+# Infrassistant: AI-Powered PostgreSQL incident reporter
 
 This project is a full-stack AI assistant designed to analyze PostgreSQL database incidents based on meeting transcripts or user queries. It automatically generates structured incident reports or suggests relevant solutions using RAG (retrieval-augmented generation) and large language models (LLMs).
 
----
 
 ## 🔧 Features
 
@@ -13,13 +12,6 @@ This project is a full-stack AI assistant designed to analyze PostgreSQL databas
 - React-based chat interface with light/dark themes
 - Supports Markdown rendering, animated typing, and file uploads
 
----
-
-## 🖼️ UI Preview
-
-![screenshot](./frontend/public/static/main.png)
-
----
 
 ## 🚀 Tech Stack
 
@@ -34,7 +26,6 @@ This project is a full-stack AI assistant designed to analyze PostgreSQL databas
 - MongoDB (for storing structured reports)
 - ChromaDB (for RAG knowledge base)
 
----
 
 ## 📦 Setup Instructions
 
@@ -56,7 +47,7 @@ pip install -r requirements.txt
 
 ### 3. Configure environment variables
 
-Create a .env file in the project root with the following:
+Create a `.env` file in the project root with the following:
 
 ```.env
 GIGA_MODEL=GigaChat-Max
@@ -95,7 +86,7 @@ To build the frontend for production:
 npm run build
 ```
 
-This will generate a production-ready build in frontend/dist/.
+This will generate a production-ready build in `frontend/dist/`
 
 ## 🔌 API Endpoints
 
@@ -104,7 +95,7 @@ This will generate a production-ready build in frontend/dist/.
 Serves the built React frontend (`index.html`).  
 If the frontend is not yet built, returns an error message.
 
----
+
 
 ### `POST /ask_solution/`
 **Description**:  
@@ -116,11 +107,11 @@ Retrieves similar solutions from the RAG knowledge base (ChromaDB) and asks Giga
 **Response**:
 ```json
 {
-  "solution": "Markdown-formatted answer with proposed solution"
+  "solution": "### Suggested Fix\n\n- **Step 1:** Restart the replica...\n- **Step 2:** Check replication lag with `pg_stat_replication`..."
 }
 ```
 
----
+
 
 ### `POST /get_incident_report/`
 **Description**:  
