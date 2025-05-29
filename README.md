@@ -2,6 +2,10 @@
 
 This project is a full-stack AI assistant designed to analyze PostgreSQL database incidents based on meeting transcripts or user queries. It automatically generates structured incident reports or suggests relevant solutions using RAG (retrieval-augmented generation) and large language models (LLMs).
 
+## 🖼️ UI Preview
+
+![Screenshot of the Infrassistant UI](./frontend/public/static/ui4.png)
+
 
 ## 🔧 Features
 
