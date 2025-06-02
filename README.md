@@ -1,4 +1,4 @@
-# Infrassistant: AI-Powered PostgreSQL incident reporter
+# Infrassistant: AI-powered PostgreSQL incident reporter
 
 This project is a full-stack AI assistant designed to analyze PostgreSQL database incidents based on meeting transcripts or user queries. It automatically generates structured incident reports or suggests relevant solutions using RAG (retrieval-augmented generation) and large language models (LLMs).
 
