@@ -13,6 +13,7 @@ from backend.utils.glossary import create_system_prompt
 from backend.db.mongo import incident_collection
 from backend.services.rag import find_similar_solution
 from backend.services.llm import call_gigachat
+from backend.preprocessing.pipeline import Preprocessor
 import pathlib
 from fastapi.responses import FileResponse
 import json
@@ -20,6 +21,8 @@ import os
 
 router = APIRouter()
 
+# Instantiate preprocessor
+preprocessor = Preprocessor()
 
 @router.get("/", response_class=HTMLResponse)
 async def serve_frontend():
@@ -114,7 +117,8 @@ async def get_incident_report(
     # Case: File uploaded (with or without prompt)
     file_id = os.path.splitext(file.filename)[0]
     content = await file.read()
-    file_text = content.decode("utf-8")
+    raw_text = content.decode("utf-8")
+    file_text = preprocessor.preprocess_text(raw_text)
 
     # Create structured prompt
     glossary = request.app.state.glossary
