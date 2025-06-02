@@ -4,6 +4,8 @@ motor==3.7.0
 pydantic==2.11.4
 pydantic_core==2.33.2
 pymongo==4.12.1
+pymorphy3==2.0.3
+pymorphy3-dicts-ru==2.4.417150.4580142
 python-dotenv==1.1.0
 python-multipart==0.0.20
 sentence-transformers==4.1.0
